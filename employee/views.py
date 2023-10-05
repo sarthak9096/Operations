@@ -8,7 +8,7 @@ def emp(request):
         if form.is_valid():  
             try:  
                 form.save()  
-                return redirect('/admin/')  
+                return redirect('/show')  
             except:  
                 pass  
     else:  

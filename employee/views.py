@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.shortcuts import render, redirect  
 from employee.forms import EmployeeForm  
 from employee.models import Employee 
-import time
 def emp(request):  
     if request.method == "POST":  
         form = EmployeeForm(request.POST)  
@@ -31,4 +30,4 @@ def update(request, id):
 def destroy(request, id):  
     employee = Employee.objects.get(id=id)  
     employee.delete()  
-    return redirect("/show")
+    return redirect("/emp")
